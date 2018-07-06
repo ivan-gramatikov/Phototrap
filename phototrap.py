@@ -9,8 +9,8 @@ cap = cv2.VideoCapture(0) # sets the video source to the default webcam (in this
 
 while 1: #endless loop 
     ret, img = cap.read() # capture the video. The read() function reads one frame from the video source, which in this example is the webcam. This returns:
-1. The actual video frame read (one frame on each loop)
-2. A return code, which will “sound the alarm” if the case was reading from a file and having ran out of frames to read, which cannot happen with a webcam
+#1. The actual video frame read (one frame on each loop)
+#2. A return code, which will “sound the alarm” if the case was reading from a file and having ran out of frames to read, which cannot happen with a webcam
 
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY) # Converts an image from one color space to another given a source, turns from a RGB image to gray
     faces = face_cascade.detectMultiScale(gray, 1.3, 5) #searching for a face
